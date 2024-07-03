@@ -1,15 +1,18 @@
 function updateTimeAndDay() {
-    const currentTimeElement = document.getElementById('currentTime');
-    const currentDayElement = document.getElementById('currentDay');
     const now = new Date();
     
-    const options = { weekday: 'long' };
-    const currentDay = new Intl.DateTimeFormat('en-US', options).format(now);
-    const currentTime = now.toUTCString().split(' ')[4];
-
-    currentTimeElement.textContent = currentTime;
-    currentDayElement.textContent = currentDay;
+    // Update UTC time
+    const utcTimeElement = document.getElementById('utc-time');
+    utcTimeElement.textContent = now.toUTCString().split(' ')[4];
+    
+    // Update current day
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentDayElement = document.getElementById('current-day');
+    currentDayElement.textContent = days[now.getUTCDay()];
 }
 
-updateTimeAndDay();
+// Update time and day every second
 setInterval(updateTimeAndDay, 1000);
+
+// Initial update
+updateTimeAndDay();
