@@ -5,30 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Caesar's Goals</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 data-testid="slackDisplayName">Tech Caesar</h1>
-        <img src="profile_picture.jpg" alt="Slack Profile Picture" data-testid="slackProfilePicture" width="150" height="150">
-    </header>
-    <main>
-        <section id="goals">
-            <h2>My Tech Goals for the Next 2 Years</h2>
-            <p>I aim to gain more experience in the tech field and build a product that will go to market.</p>
-        </section>
-        <section id="contact">
-            <p data-testid="slackEmail">Email: paschalgabrielacj8@gmail.com</p>
-        </section>
-        <section id="links">
-            <a href="https://hng.tech/learn" data-testid="hngLink">HNG Learn</a>
-            <a href="https://keyword.dog" data-testid="keywordLink">Keyword Dog</a>
-            <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrape Any Web</a>
-        </section>
-    </main>
-    <footer>
-        <p>Current Time in UTC: <span id="currentTime" data-testid="currentTimeUTC"></span></p>
-        <p>Current Day: <span id="currentDay" data-testid="currentDay"></span></p>
-    </footer>
+    <div class="container">
+        <header>
+            <h1>Tech Caesar's 2-Year Tech Journey</h1>
+        </header>
+        <main>
+            <section id="profile">
+                <div class="profile-content">
+                    <img src="profile_picture.jpg" alt="Tech Caesar's Profile Picture" data-testid="slackProfilePicture">
+                    <div class="profile-info">
+                        <p><strong>Slack Name:</strong> <span data-testid="slackDisplayName">Tech Caesar</span></p>
+                        <p><strong>Slack Email:</strong> <span data-testid="slackEmail">paschalgabrielacj8@gmail.com</span></p>
+                    </div>
+                </div>
+            </section>
+            <section id="current-info">
+                <div class="info-box">
+                    <p><strong>Current UTC Time:</strong> <span data-testid="currentTimeUTC" id="utc-time"></span></p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Current Day:</strong> <span data-testid="currentDay" id="current-day"></span></p>
+                </div>
+            </section>
+            <section id="goals">
+                <h2>My Tech Goals for the Next 2 Years</h2>
+                <div class="goals-content">
+                    <ul>
+                        <li>Gain more experience in web development and software engineering</li>
+                        <li>Build a strong portfolio of projects</li>
+                        <li>Network with other professionals in the tech industry</li>
+                        <li>Learn new technologies and programming languages</li>
+                        <li>Build and launch a product that will go to market</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="links">
+                <h2>Useful Links</h2>
+                <div class="links-content">
+                    <a href="https://hng.tech/learn" data-testid="hngLink" target="_blank" class="btn">HNG Learn</a>
+                    <a href="https://keyword.dog" data-testid="keywordLink" target="_blank" class="btn">Keyword Dog</a>
+                    <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink" target="_blank" class="btn">Scrape Any Web</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Tech Caesar. All rights reserved.</p>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
